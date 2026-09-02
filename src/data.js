@@ -1,13 +1,13 @@
 import guest1 from "./components/guests/guest1.jpg"
 import guest2 from "./components/guests/guest2.jpeg"
-import speaker1 from "./components/Speakers/speaker1.jpeg"
-import speaker2 from "./components/Speakers/speaker2.jpeg"
-import speaker3 from "./components/Speakers/speaker3.jpg"
-import speaker4 from "./components/Speakers/speaker4.jpeg"
-import speaker5 from "./components/Speakers/speaker5.jpeg"
-import speaker6 from "./components/Speakers/speaker6.jpg"
-import speaker7 from "./components/Speakers/speaker7.jpg"
-import speaker8 from "./components/Speakers/speaker8.jpeg"
+import speaker1 from "./components/Speakers/Speaker1.jpeg"
+import speaker2 from "./components/Speakers/Speaker2.jpeg"
+import speaker3 from "./components/Speakers/Speaker3.jpg"
+import speaker4 from "./components/Speakers/Speaker4.jpeg"
+import speaker5 from "./components/Speakers/Speaker5.jpeg"
+import speaker6 from "./components/Speakers/Speaker6.jpg"
+import speaker7 from "./components/Speakers/Speaker7.jpg"
+import speaker8 from "./components/Speakers/Speaker8.jpeg"
 export const REGISTRATION_URL =
   'https://docs.google.com/forms/d/e/1FAIpQLScF8Q1hEmqXrXALNGPCnLkEq8-RKQP8jCcERgl6EToDsxq9Ag/viewform'
 
