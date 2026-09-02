@@ -1,0 +1,187 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: var(--font-body);
+    color: var(--color-ink);
+    background-color: var(--color-paper);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+  }
+  ::selection {
+    background-color: rgba(23, 184, 166, 0.3);
+  }
+  :focus-visible {
+    outline: 2px solid #17B8A6;
+    outline-offset: 3px;
+  }
+}
+
+@layer utilities {
+  .bg-grid {
+    background-image: var(--tw-gradient-blueprint, linear-gradient(rgba(10,30,61,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(10,30,61,0.06) 1px, transparent 1px));
+    background-size: 28px 28px;
+  }
+  .bg-grid-dark {
+    background-image: linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Fiducial corner marks — echoes PCB registration marks */
+.fiducial {
+  position: relative;
+}
+.fiducial::before,
+.fiducial::after {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border: 2px solid currentColor;
+  opacity: 0.55;
+}
+.fiducial::before {
+  top: -1px;
+  left: -1px;
+  border-right: none;
+  border-bottom: none;
+}
+.fiducial::after {
+  bottom: -1px;
+  right: -1px;
+  border-left: none;
+  border-top: none;
+}
+
+/* Via dot used along the circuit trace */
+.via {
+  width: 9px;
+  height: 9px;
+  border-radius: 9999px;
+  background: #17B8A6;
+  box-shadow: 0 0 0 3px rgba(23,184,166,0.18);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* stylelint-enable at-rule-no-unknown */
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@keyframes radiant-line {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(500%);
+    opacity: 0;
+  }
+}
+
+.animate-radiant-line {
+  animation: radiant-line 2.8s linear infinite;
+}
+
+
+@keyframes floatOne {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-3deg);
+  }
+
+  50% {
+    transform: translateY(-12px) rotate(-2deg);
+  }
+}
+
+@keyframes floatTwo {
+  0%,
+  100% {
+    transform: translateY(0) rotate(3deg);
+  }
+
+  50% {
+    transform: translateY(14px) rotate(4deg);
+  }
+}
+
+@keyframes floatThree {
+  0%,
+  100% {
+    transform: translateY(0) rotate(2deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(3deg);
+  }
+}
+
+@keyframes floatFour {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+
+  50% {
+    transform: translateY(12px) rotate(-3deg);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+html { 
+  scroll-behavior: smooth; 
+  scroll-padding-top: 90px; 
+}
+
